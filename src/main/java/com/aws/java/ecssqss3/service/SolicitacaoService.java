@@ -33,6 +33,8 @@ public class SolicitacaoService {
             LOG.info("Mensagem Recebida: {}", textMessage.getText());
             SolicitacaoModel solicitacaoModel = objectMapper.readValue(textMessage.getText(), SolicitacaoModel.class);
             LOG.info("Classe preenchida após o Parse do Json: {}", solicitacaoModel.toString());
+            LOG.info("Autor Solicitado após o Parse do Json: {}", solicitacaoModel.getAutor());
+            LOG.info("Data da Solicitação após o Parse do Json: {}", solicitacaoModel.getDataSolicitacao());
             //Book book = new Book(bookDto.getName(), bookDto.getAuthor());
             //bookRepository.save(new Book(book.getName(),book.getAuthor()));
 
